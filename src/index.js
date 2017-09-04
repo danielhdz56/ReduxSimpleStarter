@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react'; // used to create and manage components
 import ReactDOM from 'react-dom'; // used to inteareact witht he browser
 import YTSearch from 'youtube-api-search';
