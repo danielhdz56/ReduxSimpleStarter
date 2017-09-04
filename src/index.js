@@ -27,9 +27,10 @@ class App extends Component {
     }
 
     render() {
+        const videoSearch = _.debounce(term => { this.videoSearch(term) }, 300); // will only run every 300 ms no matter how many times its called
         return (
             <div>
-                <SearchBar onSearchTermChange={term=> this.videoSearch(term)}/>
+                <SearchBar onSearchTermChange={videoSearch}/>
                 <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})} 

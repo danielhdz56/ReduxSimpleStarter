@@ -1,7 +1,8 @@
 import React from 'react';
 import VideoListItem from './video_list_item';
 
-const VideoList = (props) => { 
+const VideoList = (props) => {
+    console.log('Props defined on <VideoList> in index.js', props); 
     const videoItems = props.videos.map((video) => {
         return (
             <VideoListItem
